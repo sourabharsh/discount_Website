@@ -1,0 +1,197 @@
+@charset "utf-8";
+/*CSS file for the main page*/
+
+.html{
+	background:white;
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0px;
+	border:0px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header{
+	margin:0;
+	position:relative;
+	height:100px;
+	width:100%;	
+	display:inline-block;
+	border-bottom:1px solid #ccc;
+	}
+
+
+.logo{
+	width:200px;
+	height:60px;
+	padding-left:30px;
+	padding-top:30px;
+	padding-right:30px;
+	float:left;
+}
+
+.search_section{
+	margin:0px;
+	padding:0px;
+	float:left;
+	background:#CCC;
+	margin-top:40px;
+	height:40px;
+	display:inline-block;
+
+
+	}
+	
+#search_text{
+	margin:0px;
+	height:40px;
+	width:500px;
+	padding-top:0px;
+	padding:0;
+	border:1px solid #ccc;
+	padding-left:5px;
+	font-size:24px;
+	float:left;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:300;
+	}
+	
+#search_text:hover{
+	border:1px solid #3d8187;
+	}	
+	
+#search_text:focus{
+	outline:none;
+	}
+
+#search_button{
+	text-decoration:none;
+	border:none;	
+	background:url(assets/search_button.png);
+	width:100px;
+	height:42px;
+	float:left;
+	margin:0;
+	padding:0;	
+	}
+	
+.main_menu{
+	margin-right:40px;	
+	float:right;
+	display:inline-block;
+	height:auto;
+	width:auto;	
+	}
+	
+.main_menu a{
+	margin:10px;	
+	font-size:17px;
+	color:#3D8187;
+
+	padding-top:15px;
+	text-decoration:none;
+
+	}
+
+.main_menu a:hover{
+	border-bottom:1px solid #3D8187;
+	}
+	
+.background_image{
+	
+	width:100%;
+	text-align:center;	
+	height:auto;
+	margin:0;
+	padding:0;
+	}
+
+.subscribe{
+	margin-top:100px;
+	margin-left:100px;	
+	position:absolute;
+	font-family: 'Ubuntu', sans-serif;
+	}
+
+.subscribe h1{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:300;
+	margin:0;
+	font-size:40px;
+	font-weight:bold;	
+	}
+
+.subscribe h2{
+	font-family: 'Ubuntu', sans-serif;
+	margin:0;
+	font-weight:100;
+	}
+	
+#subscribe_text{
+	margin:0px;
+	height:40px;
+	width:400px;
+	padding-top:0px;
+	padding:0;
+	border:1px solid #ccc;
+	padding-left:5px;
+	font-size:24px;
+	float:left;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:300;
+	}
+	
+#subscribe_text:hover{
+	border:1px solid #EE3765;
+	}	
+	
+#subscribe_text:focus{
+	outline:none;
+	}
+
+#subscribe_button{
+	text-decoration:none;
+	border:none;	
+	background:url(assets/notifyme.png);
+	width:120px;
+	height:42px;
+	float:left;
+	margin:0;
+	padding:0;
+	line-height:0;
+	font-size:0;
+	margin-right:200px;
+
+	
+	}
+	
+.middle_section{
+	position:relative;	
+	}
+.footer{
+	width:100%;	
+	background:#999;
+	}
+	
+
+.footer_menu{
+	margin-top:50px;
+	margin-right:5%;
+	margin-bottom:5px;
+	height:auto;
+	float:right;
+	width:auto;
+	}
+
+.footer_menu a{
+	margin:10px;	
+	font-size:13px;
+	padding-top:15px;
+	text-decoration:none;
+	color:#666;
+
+	}
+.invalid_Id{
+	font-size: 15px;
+	color:#EE3765;
+	}
