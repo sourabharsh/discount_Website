@@ -2,8 +2,8 @@
 	
 	// Database Configuration
 	$mysql_hostname = "localhost";
-	$mysql_username = "root";
-	$mysql_password = "";
+	$mysql_username = "zigles";
+	$mysql_password = "#ED09b031";
 	$mysql_database = "emails";
 	
 	// connect to the Database 
@@ -25,7 +25,21 @@
 		$result = mysql_query($sql,$mysql_conn)
 				 or die("Failed to create the table Users " .mysql_error($mysql_conn));
 	};
-	//Select the database
+	//Select the table query
+	$sql = "SELECT 1 FROM  query";
+	if(mysql_query($sql,$mysql_conn) === FALSE)
+	{
+		$sql = "CREATE TABLE query
+				( name varchar(500) NOT NULL,
+				  email varchar(500) NOT NULL,
+				  url varchar(500),
+				  address varchar(500),
+				  query varchar(2000)
+
+				)";
+		$result = mysql_query($sql,$mysql_conn)
+				 or die("Failed to create the table query " .mysql_error($mysql_conn));
+	}
 		
 		
 	

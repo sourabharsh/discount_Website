@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
 
 <head>
 <title>Contact us</title>
@@ -10,12 +10,12 @@
 <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
 <link href="contact_us.css" rel="stylesheet" type="text/css" />
-
+<script src="jquery.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
 
-<body "> 
+<body > 
 	<div class="header">
     	<div class="logo">
         	<a href="#">
@@ -24,7 +24,7 @@
 	    </div>
         
         <div class="search_section">
-        	<input id="search_text"type="text"/>
+        	<input id="search_text" type="text"/>
             <input id="search_button" type="button" />
         </div>               
 
@@ -61,18 +61,67 @@
                 </div>
                 
             </div>
+            <div >
+            	<script src="assets/form_validation.js"></script>
+            	<form class="contact_form" method="post" action="#"> 
+                	<h2>CONTACT FORM</h2>
+	               	<p class="constant_width">Name: </p>  <input onBlur="validateName(this.value)" type="text" name="name" placeholder="Art Vandelay" id="userName"
+                    required="required" aria-required="true" spellcheck="false" />
+                    <label id="name"> &nbsp;</label> </br>
+                    
+                    <p >Email:</p>  <input type="text" name="email" placeholder="abc@xyz.com" id="userEmail"
+					 required="required" aria-required="true"  spellcheck="false" onBlur="validateEmail(this.value)"
+                     /> 
+                    <label id="email"> &nbsp;</label> </br>
+
+                     
+                    <p>Website: </p>  <input type="text" name="website" id="url" placeholder="yourcompany.com" spellcheck="false"
+                     />                   
+                    </br>                    
+                    
+                    <p>Address: </p>  <input type="text" name="address" id="url" placeholder="your address..."/> </br>
+                    
+					  <textarea id="message" type="text" name="query" placeholder="type your query here..."></textarea> </br>
+						<span id="result"></span>
+                    <input name="contact_form_submit"  id="contact_form_submit" type="submit"  value=""></input>
+ `                    
+                </form>
+            	    
+                <script src="form_submit.js"></script>
+            </div>
+            
             <script>
             	function initialize(){
-                var map_canvas = document.getElementById('map_canvas');
-                var map = new google.maps.Map(map_canvas);
-                var mapOptions = {
-                	center: new google.maps.LatLng(12.9860432,80.23875369999999),
-                    zoom: 15,
-                    mapTypeId:  google.maps.MapTypeId.ROADMAP                    
-                }
-                var map = new google.maps.Map(map_canvas, mapOptions);
-                }
-               google.maps.event.addDomListener(window, 'load', initialize);
+                	var myLatLing  = new google.maps.LatLng(12.986086199999999,80.2387182);
+                    var mapOptions = {
+                    	zoom:15,
+	                    center: myLatLing
+    	                };
+                
+                    var map = new google.maps.Map(document.getElementById('map_canvas'),mapOptions);
+                    
+                    var contentString = '<div id="infoWindow">' +
+                    					'<img src="assets/logo_in_map.png"></img>' + 
+                    					
+                                        '<p>#422, Jamuna Hostel , IIT Madras, Chennai-600036</p>' +
+                    					'</div>';
+                    					
+                    var infoWindow = new google.maps.InfoWindow({
+                        content:contentString
+                    });
+                    
+                    var marker = new google.maps.Marker({
+                        position: myLatLing,
+                        map:map,
+                        title: 'Zigles.com :)'
+                    });
+                    
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infoWindow.open(map,marker);
+                    });
+                 }
+                
+                google.maps.event.addDomListener(window, 'load', initialize);
             </script>
             
             <!--EMbed google map -->
