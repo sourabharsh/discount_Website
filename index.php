@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Zigles</title>
@@ -8,20 +8,22 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
-	
+<script src="jquery.js"></script>
 </head>
 
-<body class="html">
+<body >
     <div class="header">
     	<div class="logo">
-        	<a href="#">
+        	<a href="index.php">
     			<img src="assets/logo.png" />
 		    </a>
 	    </div>
         
         <div class="search_section">
-        	<input id="search_text"type="text"/>
-            <input id="search_button" type="button" />
+        	
+        	<input id="search_text" autofocus placeholder="search by brands here..." type="text"/>
+            <input id="search_button" type="button"  />
+            <script src="scripts/dynamicPlaceholderForSearch.js"></script>
         </div>               
 
         <div class="main_menu">
@@ -30,8 +32,7 @@
             <a href="#">ABOUT US</a>        	            
         </div>
         
-
-    </div>    
+    </div>
     
     <div class="middle_section">
     	
@@ -50,7 +51,7 @@
     		 
                 <?php
                // script for user subscription
-			   include('config.php');
+			   include('scripts/databaseConfiguration.php');
 			   if(isset($_POST['subscribe_button'])){
 				   $email_id = $_POST['email_id'];
 				   if(preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email_id)){					   

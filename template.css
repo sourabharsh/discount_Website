@@ -55,6 +55,20 @@
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight:300;
 	}
+
+/*CSS for the placeholder*/
+::-webkit-input-placeholder {
+	font-style:italic;
+	}
+/* firefox 19+ */
+::-moz-placeholder{
+	font-style:italic;
+	}
+	
+/* ie */
+:-ms-input-placeholder{
+	font-style:italic;
+	} 
 	
 #search_text:hover{
 	border:1px solid #3d8187;
@@ -195,3 +209,4 @@
 	font-size: 15px;
 	color:#EE3765;
 	}
+	

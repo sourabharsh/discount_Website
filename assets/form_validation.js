@@ -27,6 +27,18 @@ function validateName(name){
 		return true;
 		}	
 	}
+// Validate query for emptiness
+function validateQuery(query){
+	if(query ==""){
+		document.getElementById('query').innerHTML = 'empty';
+		return false;
+		}
+	else{
+		document.getElementById('query').innerHTML = '';
+		return true;
+		}	
+	}
+
 
 function validateUrl(url){
 	if(url.match(/(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/) == false){
@@ -49,10 +61,23 @@ $(function(){
 		var name = document.getElementById("userName").value;
 		var email = document.getElementById("userEmail").value;
 		var url = document.getElementById("url").value;
+		var address = document.getElementById("address").value;
 		var query = document.getElementById("message").value;
 		//validate and process the form here 
-		if(validateName(name) == true && validateEmail(email) == true && validateName(query)){
-			document.getElementById("result").innerHTML = 'Successful, We will get back to you asap!';	
+		if(validateName(name) == true && validateEmail(email) == true && validateQuery(query)){
+
+			var request = 	$.ajax({
+							url: "scripts/uploadQuery.php",
+							data: {name: name, email:email,url:url,address:address,query:query},
+							type: "GET",
+							context:document.body				
+							});
+			request.done(function(msg){
+				$("#result").html('Successful, We will get back to you asap!');
+				});
+			request.fail(function(jqXHR, textStatus){
+				$("#result").html('Error, please try later');
+				});
 			}
 			
 		else{

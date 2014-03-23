@@ -18,14 +18,16 @@
 <body > 
 	<div class="header">
     	<div class="logo">
-        	<a href="#">
+        	<a href="index.php">
     			<img src="assets/logo.png" />
 		    </a>
 	    </div>
         
         <div class="search_section">
-        	<input id="search_text" type="text"/>
-            <input id="search_button" type="button" />
+        	
+        	<input id="search_text" autofocus placeholder="search by brands here..." type="text"/>
+            <input id="search_button" type="button"  />
+            <script src="scripts/dynamicPlaceholderForSearch.js"></script>
         </div>               
 
         <div class="main_menu">
@@ -79,9 +81,11 @@
                      />                   
                     </br>                    
                     
-                    <p>Address: </p>  <input type="text" name="address" id="url" placeholder="your address..."/> </br>
+                    <p>Address: </p>  <input type="text" name="address" id="address" placeholder="your address..."/> </br>
                     
-					  <textarea id="message" type="text" name="query" placeholder="type your query here..."></textarea> </br>
+					  <textarea id="message" type="text" name="query" placeholder="type your query here..."></textarea>
+                      <label id="query"></label>
+                       </br>
 						<span id="result"></span>
                     <input name="contact_form_submit"  id="contact_form_submit" type="submit"  value=""></input>
  `                    
@@ -128,6 +132,22 @@
             <div id="map_canvas">          	
             </div>
             
+            <!--Our Team-->
+            <div class="ourTeam">
+            	<h2>Our Team</h2>
+                <div>
+                	<img src="assets/team/sourabh.png"/>
+                    <p id="icon_caption">Sourabh Gupta</p>
+                </div>
+                <div>
+                	<img src="assets/team/sourabh.png"/>
+                    <p id="icon_caption">Sumedh Inje</p>
+                </div>
+                <div>
+                	<img src="assets/team/sourabh.png"/>
+                    <p id="icon_caption">Lalit Gangwar</p>
+                </div>
+            </div>
     </div>
 			
 </body>
