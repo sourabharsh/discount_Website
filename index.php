@@ -87,14 +87,14 @@
          
          <!-- Image Slideshow -->
          <script>
-                $(function() {
-                    $('.image_slideshow').unslider({
-						speed:500,
-						delay:10000,
-						keys:true,
-						dots:true
-						});
-                })
+		 	$(function() {
+   				$('.image_slideshow').hide();
+			 	$(window).load(function(){
+					$('.image_slideshow').show();
+				    $('.image_slideshow').unslider();
+				});
+			});
+	            
          </script>
          <div class="image_slideshow">
             	

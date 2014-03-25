@@ -182,9 +182,11 @@
 	
 .middle_section{
 	position:relative;	
+	height:500px;
 	}
 .footer{
-	z-index:1;	
+	z-index:1;
+	position:relative;
 	width:100%;		
 	background:#999;
 	}
@@ -213,12 +215,15 @@
 	}
 
 .image_slideshow{
+	padding:0;
 	position:relative;
 	overflow: auto;
 	}
 
 .image_slideshow li{
 	list-style: none;
+	margin:0;
+	padding:0;
 	}
 
 .image_slideshow ul li{
@@ -226,6 +231,7 @@
 	}
 
 .image_slideshow ul li img{
-	position:relative;
+	padding:0;
+	margin:0;
 
 	}
