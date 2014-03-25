@@ -2,8 +2,8 @@
 	
 	// Database Configuration
 	$mysql_hostname = "localhost";
-	$mysql_username = "zigles";
-	$mysql_password = "#ED09b031";
+	$mysql_username = "root";
+	$mysql_password = "";
 	$mysql_database = "emails";
 	
 	// connect to the Database 

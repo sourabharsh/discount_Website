@@ -124,6 +124,7 @@
 	margin-top:100px;
 	margin-left:100px;	
 	position:absolute;
+	z-index:5;
 	font-family: 'Ubuntu', sans-serif;
 	}
 
@@ -183,7 +184,8 @@
 	position:relative;	
 	}
 .footer{
-	width:100%;	
+	z-index:1;	
+	width:100%;		
 	background:#999;
 	}
 	
@@ -209,4 +211,21 @@
 	font-size: 15px;
 	color:#EE3765;
 	}
-	
+
+.image_slideshow{
+	position:relative;
+	overflow: auto;
+	}
+
+.image_slideshow li{
+	list-style: none;
+	}
+
+.image_slideshow ul li{
+	float:left;
+	}
+
+.image_slideshow ul li img{
+	position:relative;
+
+	}

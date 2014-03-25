@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Zigles</title>
@@ -8,7 +7,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
-<script src="jquery.js"></script>
+
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="//unslider.com/unslider.min.js"></script>
+
 </head>
 
 <body >
@@ -35,7 +37,8 @@
     </div>
     
     <div class="middle_section">
-    	
+    
+    
 	    <div class="subscribe">
 	        <h2>Coming soon,</br> the shopping discount site which will change the way you shop!</h2>
     	    <p>Be notified when Zigles is ready to launch and it will be totally   ......... free :)</p>
@@ -81,12 +84,37 @@
 				   }
 			?>
          </div> 
-        <img class="background_image" src="assets/shopping/shopping_1.png"/>
+         
+         <!-- Image Slideshow -->
+         <script>
+                $(function() {
+                    $('.image_slideshow').unslider({
+						speed:500,
+						delay:10000,
+						keys:true,
+						dots:true
+						});
+                })
+         </script>
+         <div class="image_slideshow">
+            	
+        	    <ul>
+            	    <li><img src="assets/shopping/1.PNG" ></img></li>
+                    <li><img src="assets/shopping/2.png"></img></li>
+                    <li><img src="assets/shopping/3.PNG"></img></li>
+					
+    	        </ul>
+		</div>
+
+        	
+			 
     </div>
+    
     
     
     <!--  footer section    -->   	         
     <div class="footer">
+
     	<div class="footer_menu">
         	<a href="#">HOME </a>
             |
@@ -95,6 +123,7 @@
             <a href="#">ABOUT US</a>        	            
         </div>
 
-    </div>
+    
+    
 </body>
 </html>
